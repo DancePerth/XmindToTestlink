@@ -23,9 +23,9 @@ def usage():
     Usgae:
 
       生成用例xml:
-        python3 dict_to_xml.py -d xmind文件目录 -t case -a  #加-a 生成api用例, 不加a为其他用例
+        xmindzen2testlink -d xmind文件目录 -t case -a  #加-a 生成api用例, 不加a为其他用例
       生成需求xml:
-        python3 dict_to_xml.py -d xmind文件目录 -t req -i 需求的ID标识
+        xmindzen2testlink -d xmind文件目录 -t req -i 需求的ID标识
 
       args:
         -d dir
