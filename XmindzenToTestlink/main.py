@@ -5,8 +5,8 @@ from xml.etree import ElementTree as ET
 from getopt import getopt
 import os
 import sys
-import xmind_to_dict
-import dict_to_xml
+from XmindzenToTestlink import xmind_to_dict
+from XmindzenToTestlink import dict_to_xml
 
 def get_flist(fdir):
     flist = []
@@ -36,7 +36,10 @@ def usage():
     '''
     print(usage.__doc__)
 
-if __name__ == "__main__":
+def main():
+    if len(sys.argv) <= 1:
+        usage()
+        sys.exit()
     opts,args = getopt(sys.argv[1:],"d:t:i:ah")
     xmind_type = "case"
     xml_name = "out.xml"
@@ -82,3 +85,6 @@ if __name__ == "__main__":
         w = ET.ElementTree(root_elem)
         dx.indent(root_elem)
         w.write(xml_path, 'utf-8', True)
+
+if __name__ == "__main__":
+    main()
