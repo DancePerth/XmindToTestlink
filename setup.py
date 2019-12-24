@@ -14,11 +14,11 @@ long_description = __doc__
 
 def main():
     setup(
-        name="XmindzenToTestlink",
+        name="XmindToTestlink",
         description="Convert xmindzen to TestLink xml",
         keywords="xmindzen testlink import converter testing testcase requirement",
         long_description=long_description,
-        version="1.0.2",
+        version="1.0.5",
         author="DancePerth",
         author_email="28daysinperth@gmail.com",
         url="https://github.com/DancePerth/XmindzenToTestlink",
@@ -26,7 +26,7 @@ def main():
         package_data={},
         entry_points={
             'console_scripts':[
-                'xmindzen2testlink=XmindzenToTestlink.main:main'
+                'xmindtotestlink=XmindToTestlink.main:main'
                 ]
             }
     )

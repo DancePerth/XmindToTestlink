@@ -1,3 +1,0 @@
-# XmindzenToTestlink
-
-    ...to be continued

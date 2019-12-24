@@ -28,7 +28,7 @@ class XmindToDict(object):
                 'suites':[],
                 'cases':[]
                 }
-        suite['title'] = name.strip(" .,")
+        suite['title'] = name.strip(" .,").replace(' ','')
         suite['detail'] = suite_detail
         return suite
     
@@ -83,7 +83,7 @@ class XmindToDict(object):
         if req_spec != '' and req == '':
             case['reqband'] = {req_spec: ''}
         if "title" in in_data.keys():
-            case['title'] = in_data['title'].strip(" .,")
+            case['title'] = in_data['title'].strip(" .,").replace('','')
         if "notes" in in_data.keys():
             case['summary'] = self.get_summery(in_data['notes'])
         if "children" in in_data.keys() and in_data['children'] != {}:
